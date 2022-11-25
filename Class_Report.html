@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>HCI Report</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">HCI Report</h1>
+</header>
+<h1 id="επικοινωνία-ανθρώπου-υπολογιστή">Επικοινωνία
+Ανθρώπου-Υπολογιστή</h1>
+<h1 id="βασικές-πληροφορίες">Βασικές Πληροφορίες:</h1>
+<p>ΑΜ: inf2021147 Ονοματεπώνυμο: Μουρελάτος Παναγιώτης <a
+href="https://github.com/PanMour">Github Προφίλ</a> <a
+href="https://github.com/OMADA12">Ομάδα</a> <a
+href="https://panmour-2021147.netlify.app/">Netlify Site</a></p>
+<h1 id="αναφορά">Αναφορά:</h1>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Εβδομάδα</th>
+<th><a href="https://courses-ionio.github.io/help/deliverables/">Όλα τα
+παραδοτέα βρίσκονται στην ίδια σελίδα της τελικής αναφοράς</a> με τα
+προσωπικά στοιχεία σας (Όνομα, ΑΜ, github profile) και μαζί με αυτόν εδώ
+τον πίνακα περιεχομένων</th>
+<th>Σύνδεσμος στην <a
+href="https://github.com/courses-ionio/help/discussions/categories/show-and-tell">εβδομαδιαία
+παρουσίαση προόδου στις συζητήσεις</a></th>
+<th>Αυτοαξιολόγηση σύμφωνα με τα κριτήρια της αντίστοιχης άσκησης</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><a
+href="https://github.com/courses-ionio/hci/discussions/1794">Δημιουργία
+ομάδας</a> + <a href="https://courses-ionio.github.io/help/guide/">Φορκ
+και δημιουργία σελίδας τελικής αναφοράς</a>, <a
+href="https://raw.githubusercontent.com/courses-ionio/hci/master/README.md">προσθήκη
+πίνακα περιεχομένων</a>, <a
+href="https://courses-ionio.github.io/help/intro/">συγγραφή της
+εισαγωγής</a>, αποστολή της εισαγωγής <a
+href="https://github.com/courses-ionio/help/discussions/categories/show-and-tell">για
+σχολιασμό στην συζήτηση</a> και καταγραφή του συνδέσμου συζήτησης δίπλα
+–&gt;</td>
+<td><a
+href="https://github.com/courses-ionio/help/discussions/893">ΠΑΡΑΔΟΤΕΟ
+1</a>, <a href="https://github.com/OMADA12">Η ΟΜΑΔΑ ΜΟΥ</a>, Απάντηση
+στις ερωτήσεις του Edpuzzle 1ης εβδομάδας</td>
+<td>Ολοκλήρωση ζητούμενων! (πιθανή βελτίωση ζητουμένων καθώς αυξάνω τις
+γνώσεις μου!!)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Άσκηση γραμμής εντολών (linux install)</td>
+<td><a
+href="https://github.com/courses-ionio/help/discussions/1128">ΠΑΡΑΔΟΤΕΟ
+2</a>, Απάντηση στις ερωτήσεις του Edpuzzle 2ης εβδομάδας, Linux
+install</td>
+<td>Ολοκλήρωση ζητούμενων!</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Συμμετοχικό περιεχόμενο A1</td>
+<td><a
+href="https://github.com/courses-ionio/help/discussions/1224">ΠΑΡΑΔΟΤΕΟ
+3</a>, Απάντηση στις ερωτήσεις του Edpuzzle 3ης εβδομάδας, υλοποίηση
+Συμμετοχικού περιεχομένου Α1 με την <a
+href="https://github.com/OMADA12">ΟΜΑΔΑ ΜΟΥ</a></td>
+<td>Ολοκλήρωση ζητούμενων! (πιθανή βελτίωση ζητουμένων έπειτα από
+συζήτηση στην τάξη!!)</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Άσκηση γραμμής εντολών (warm up cli)</td>
+<td><a
+href="https://github.com/courses-ionio/help/discussions/1351">ΠΑΡΑΔΟΤΕΟ
+4</a>, Απάντηση στις ερωτήσεις του Edpuzzle 4ης εβδομάδας,
+πραγματοποίηση μερικών warm-ups</td>
+<td>Ολοκλήρωση ζητούμενων! (πιθανή βελτίωση ζητουμένων καθώς αυξάνω τις
+γνώσεις μου!!)</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Συμμετοχικό περιεχόμενο A2</td>
+<td><a
+href="https://github.com/courses-ionio/help/discussions/1484">ΠΑΡΑΔΟΤΕΟ
+5</a>, Απάντηση στις ερωτήσεις του Edpuzzle 5ης εβδομάδας, υλοποίηση
+Συμμετοχικού περιεχομένου Α2 με την <a
+href="https://github.com/OMADA12">ΟΜΑΔΑ ΜΟΥ</a></td>
+<td>Ολοκλήρωση ζητούμενων! (πιθανή βελτίωση ζητουμένων έπειτα από
+συζήτηση στην τάξη!!)</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Κατασκευή του βιβλίου Α</td>
+<td><a
+href="https://github.com/courses-ionio/help/discussions/1583">ΠΑΡΑΔΟΤΕΟ
+6</a>, Απάντηση στις ερωτήσεις του Edpuzzle 5ης εβδομάδας, ολοκλήρωση
+κατασκευής του βιβλίου Α</td>
+<td>Ολοκλήρωση ζητούμενων! (πιθανή βελτίωση ζητουμένων έπειτα από
+συζήτηση στην τάξη!!)</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Συμμετοχικό περιεχόμενο B1</td>
+<td><a
+href="https://github.com/courses-ionio/help/discussions/1700">ΠΑΡΑΔΟΤΕΟ
+7</a>, Απάντηση στις ερωτήσεις του Edpuzzle 7ης εβδομάδας, υλοποίηση
+Συμμετοχικού περιεχομένου Β1 με την <a
+href="https://github.com/OMADA12">ΟΜΑΔΑ ΜΟΥ</a></td>
+<td>Ολοκλήρωση ζητούμενων! (πιθανή βελτίωση ζητουμένων έπειτα από
+συζήτηση στην τάξη!!)</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Άσκηση γραμμής εντολών</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Συμμετοχικό περιεχόμενο B2</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Άσκηση γραμμής εντολών</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Κατασκευή του βιβλίου Β</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Τελική αναφορά*</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="παραδοτέο-1ο">Παραδοτέο 1ο:</h3>
+<h2 id="εισαγωγη">ΕΙΣΑΓΩΓΗ:</h2>
+<p>Οι στόχοι μου για το μάθημα Επικοινωνία Ανθρώπου - Υπολογιστή είναι
+να μάθω να διαχειρίζομαι το Github καθώς γνωρίζω ότι έχει πολλές
+δυνατότητες που μπορεί να μου προσφέρει ενώ ταυτόχρονα να βελτιώσω και
+τις προσωπικές μου ικανότητες στον προγραμματισμό ώστε να μπορώ να
+αντεπεξέλθω καλύτερα στις προκλήσεις της επαγγελματικής μου
+σταδιοδρομίας. Επίσης, θα ήθελα να αποκτήσω μεγαλύτερη οικειότητα με το
+λειτουργικό σύστημα της Linux, καθώς το έχω χρησιμοποιήσει σε πολύ μικρό
+βαθμό. Επιπλέον προσωπικός μου στόχος είναι να αναπτύξω την ομαδικότητά
+μου καθώς και την κριτική μου σκέψη, καθώς μελλοντικά σκέφτομαι να
+ασχοληθώ με την διδασκαλία της πληροφορικής και πιστεύω πως αυτές οι δύο
+δεξιότητες είναι απαραίτητες για οποιοδήποτε εκπαιδευτικό. Τέλος μέχρι
+να μπορέσω να διοριστώ ως καθηγητής ή εάν δεν καταφέρω να ασχοληθώ με
+την εκπαίδευση θα ήθελα να ασχοληθώ με το game designing, καθώς
+μεγαλώνοντας περνούσα αρκετό από τον ελεύθερο μου χρόνο παίζοντας στο
+PlayStation και στο Xbox. Αυτό είχε ως αποτέλεσμα να μου αρέσουν τα
+βιντεοπαιχνίδια και πλέον είναι κάτι που με ενδιαφέρει να ασχοληθώ και
+επαγγελματικά, ειδικά με multiplayer παιχνίδια καθώς μου επέτρεπαν να
+γνωρίζω καινούργιο κόσμο και ιδέες, κάτι που θεωρώ πολύ σπουδαίο και
+κάτι που προσφέρει και το ίδιο το μάθημα της Επικοινωνίας Ανθρώπου -
+Υπολογιστή καθώς γνωρίζουμε και βλέπουμε την οπτική πλευρά διαφόρων
+σπουδαίων ανθρώπων στον χώρο της πληροφορικής.</p>
+<h1 id="παραδοτέο-2ο">Παραδοτέο 2ο:</h1>
+<h2 id="προβλήματα-κατά-την-εγκατάσταση-και-εντυπώσεις">Προβλήματα κατά
+την εγκατάσταση και εντυπώσεις</h2>
+<p>Η εγκατάσταση ήταν ένα αρκετά περίπλοκο θέμα για εμένα καθώς ήταν η
+πρώτη μου επαφή με την Linux. Αρχικά πήρα την απόφαση να χρησιμοποιήσω
+ένα USB στικάκι για την εγκατάσταση καθώς κατέληξα πως ήταν ο
+ασφαλέστερος τρόπος. Ευτυχώς με την παρακολούθησει διαφόρων βίντεο
+σχετικά με το θέμα μπόρεσα να κάνω την εγκατάσταση χωρίς ιδιαίτερα
+προβλήματα.</p>
+<h2 id="εγκατάσταση">Εγκατάσταση</h2>
+<p>Στην αρχή δημιούργησα δύο partitions στο στικάκι, έπειτα αφότου το
+χώρισα και τα έκανα mount έγινε η εγκατάσταση του πρώτου πακέτου
+pacstrap /mnt base base-devel linux-linux firmware vim. Μετά εκτελέθηκε
+η εντολή grub-install –target=x86_64-efi –efi-directory=/boot/efi
+–bootloader-id=GRUB –removeble –recheck/ και για το configuration του
+grub-mkconfig -o /boot/grub/grub.cfg. Έπειτα οι drivers εγκαταστήθηκαν
+με εντολές όπως η pacman -S και η systemctl enable NetworkManager ενώ
+μετά δημιούργησα τον κωδικό και το όνομα χρήστη (/ passwd,
+vim/etc/hostname). Τέλος έκανα την εγκατάσταση του neofetch και έτρεξα
+το journalistctl όπως είχε ζητηθεί <a
+href="https://asciinema.org/a/529785">(neofetch and
+journalistctl)</a>.</p>
+<h1 id="παραδοτέο-3ο">Παραδοτέο 3ο:</h1>
+<h2 id="άσκηση-α1">Άσκηση Α1</h2>
+<p>Έχοντας αποκτήσει μερικές γνώσεις σχετικά με την χρήση του Arch Linux
+από την προηγούμενη εβδομάδα και έπειτα από συνεννόηση με την ομάδα μου
+ξεκίνησα την διαδικασία να εμπλουτίσω το περιεχόμενου του <a
+href="https://pibook.epidro.me/">site</a> με δικές μου εικόνες.
+Δημιούργησα το δικό μου <a
+href="https://panmour-2021147.netlify.app/">site</a> χρησημοποιώντας την
+γραμμή εντολών του Linux και στην συνέχεια το netlify και πρόσθεσα τις 4
+εικόνες που βρήκα και θεωρούσα πως συνήσφεραν στο ήδη υπάρχον υλικό και
+σχετίζονταν με την εισαγωγή μου (2 κανονικές εικόνες και 2 160x160
+εικόνες) καθώς και τα 2 md files που χρειάζονταν.</p>
+<h3 id="έπειτα-πραγματοποίησα-το-pull-request">Έπειτα πραγματοποίησα το
+pull request</h3>
+<p>=&gt; <a href="https://github.com/OMADA12/images/pull/9">για τις
+εικόνες</a> και</p>
+<p>=&gt; <a href="https://github.com/OMADA12/_gallery/pull/14">για τα md
+files μου</a>.</p>
+<h3
+id="μερικές-πληροφορίες-σχετικά-με-τα-αντικείμενα-που-επέλεξα">Μερικές
+πληροφορίες σχετικά με τα αντικείμενα που επέλεξα:</h3>
+<p>=&gt; <a
+href="https://github.com/PanMour/info/blob/main/xbox_information.md">Xbox
+info</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/info/blob/main/oxo_information.md">OXO
+info</a></p>
+<h3 id="οι-εικόνες-μου-στο-site-στο-netlify">Οι εικόνες μου στο site στο
+Netlify:</h3>
+<p>=&gt; <a href="https://panmour.netlify.app//gallery/xbox/">Xbox
+image</a></p>
+<p>=&gt; <a href="https://panmour.netlify.app//gallery/oxo/">OXO
+image</a></p>
+<h3 id="τα-md-αρχεία-μου-και-οι-εικόνες-στο-site-μου-στο-github">Τα md
+αρχεία μου και οι εικόνες στο site μου στο Github:</h3>
+<p>=&gt; <a
+href="https://github.com/PanMour/_gallery/blob/0e4a33c983c643efefc24c6e49561b23ccd415f9/xbox.md">Xbox
+md</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/images/blob/f38101f0436627e15de972213160aba4f07d9b4d/xbox.jpg">Xbox
+image</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/images/blob/f38101f0436627e15de972213160aba4f07d9b4d/xbox-thumb.jpg">Xbox
+image thumb</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/_gallery/blob/0e4a33c983c643efefc24c6e49561b23ccd415f9/oxo.md">OXO
+md</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/images/blob/f38101f0436627e15de972213160aba4f07d9b4d/oxo.jpg">OXO
+image</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/images/blob/f38101f0436627e15de972213160aba4f07d9b4d/oxo-thumb.jpg">OXO
+image thumb</a></p>
+<h3 id="λόγος-επιλογής-των-εικόνων">Λόγος επιλογής των εικόνων</h3>
+<p>Ο κύριως λόγος που επέλεξα τισ συγκεκριμένες εικόνες είναι επειδή
+σχετίζονται με ένα από τα επαγγέλματα που έχω σκεφτεί να ασχοληθώ στο
+μέλλον, το game designing. Το OXO ήταν ένα από τα πρώτα βιντεοπαιχνίδια
+που δημιουργήθηκαν και το πρώτο multiplayer, κάτι που πιστεύω πως είναι
+πολύ σπουδαίο καθώς έστρωσε τον δρόμο για την δημιουργία μιας ολόκληρης
+κατηγορίας παιχνιδιών που άλλαξε σημαντικά την αγορά. Όσον αφορά το
+Xbox, μπορεί να μην ήταν η πρώτη κονσόλα βιντεοπαιχνιδιών (game-machine)
+που κυκλοφόρησε αλλά είχε σημαντική επίδραση και εξακολουθεί να έχει,
+επιπλεόν σε προσωπικό επίπεδο ήταν η πρώτη κονσόλα που κατείχα κάτι
+αρκετά σπουδαίο για εμένα, για αυτούς τους λόγους πιστεύω ότι είναι μια
+καλή προσθήκη στο ήδη υπάρχων υλικό τουυ site.</p>
+<h2 id="νέα-θέματα">Νέα Θέματα</h2>
+<p>Έπειτα από συζήτηση στην τάξη, αποφάσισα να προσθέσω δύο καινούργια
+θέματα στο site που να συνδέονται περισσότερο με την εισαγωγή μου, που
+αφορά την εκπαίδευση, και μεταξύ τους. Οι επιλογές μου είναι το IBook
+και το OpenSIS. Το IBook θεωρώ πως χρειάζεται πλέον σε κάθε σχολείο
+καθώς στην εποχή μας η πρόσβαση στο διαδίκτυο είναι απολύτως απαραίτητη.
+Ο κλασσικός τρόπος διδασκαλίας δεν καλύπτει άλλο τις ανάγκες τις
+κοινωνίας και για αυτό χρειάζεται, έστω και σε συμπληρωματικό βαθμό, η
+διάδραση του μαθητή με την τεχνολογία για την καλύτερη κατανόηση του
+μαθήματος και για την ανάπτυξη κριτικής και αυτόνομης σκέψης, καθώς θα
+μπορεί να εξερευνήσει το θέμα που διδάσκεται μέσω πηγών που θα βρίσκει ο
+ίδιος και να λαμβάνει το δικό του συμπέρασμα. Αντίστοιχα, το OpenSIS
+είναι ένας καλύτερος και πιο σύγχρονος τρόπος για την αποθήκευση των
+δεδομένων των μαθητών του σχολείου. Θα επιτρέπει στους καθηγητές να
+παρακολουθούν πιο αποτελεσματικά την πρόοδο των μαθητών τους και θα
+δίνει και την δυνατότητα στους μαθητές να έχουν πρόσβασει σε όλους τους
+βαθμούς τους, εάν το σχολείο το επιθυμεί. Επιπλέον διευκωλύνει την
+καταγραφεί των απόντων καθημερινά καθώς οι μαθητές μέσω των IBooks τους
+θα μπορούν να δηλώσουν πως είναι παρόν.</p>
+<h3 id="έπειτα-πραγματοποίησα-το-pull-request-1">Έπειτα πραγματοποίησα
+το pull request:</h3>
+<p>=&gt; <a href="https://github.com/OMADA12/images/pull/15">για τις
+εικόνες</a></p>
+<p>=&gt; <a href="https://github.com/OMADA12/_gallery/pull/18">για τα md
+files μου</a></p>
+<h3 id="οι-εικόνες-μου-στο-site-στο-netlify-1">Οι εικόνες μου στο site
+στο Netlify:</h3>
+<p>=&gt; <a
+href="https://panmour.netlify.app//gallery/ibook/">ibook</a></p>
+<p>=&gt; <a
+href="https://panmour.netlify.app//gallery/opensis/">opensis</a></p>
+<h3 id="τα-md-αρχεία-μου-και-οι-εικόνες-στο-site-μου-στο-github-1">Τα md
+αρχεία μου και οι εικόνες στο site μου στο Github:</h3>
+<p>=&gt; <a
+href="https://github.com/PanMour/_gallery/blob/master/ibook.md">ibook.md</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/images/blob/master/ibook.jpg">ibook
+image</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/images/blob/master/ibook-thumb.jpg">ibook-thumb</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/_gallery/blob/master/opensis.md">opensis.md</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/images/blob/master/opensis.jpg">opensis
+image</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/images/blob/master/opensis-thumb.jpg">opensis-thumb</a></p>
+<h1 id="παραδοτέο-4ο">Παραδοτέο 4ο:</h1>
+<h2 id="warm-ups">Warm-ups</h2>
+<p>Καθώς είχα ήδη πραγματοποιήση την εγκατάσταση του Arch Linux σε
+στικάκι, αποφάσισα να ξεκινήσω απευθείας την εξάσκηση με την
+πραγματοποίηση μερικών warm-ups ώστε να αυξήσω ακόμη περισσότερο την
+οικειότητα μου και να βελτιώσω τις ικανότητές μου στην χρήση των Arch
+Linux. Τα warm-ups που έχω εκτελέσει: <a
+href="https://asciinema.org/a/533465">fetch</a>, <a
+href="https://asciinema.org/a/533461">weather report</a>. Η πρώτη εντολή
+$ curl ipaddy.net μου εμφάνισε την διεύθυνση καθώς και την χώρα. Ενώ με
+την δεύτερη εντολή wttr εμφάνησα τηνν πρόβλεψη του καίρο στην τοπική
+περιοχή.</p>
+<h1 id="παραδοτέο-5ο">Παραδοτέο 5ο:</h1>
+<h2 id="άσκηση-α2">Άσκηση Α2</h2>
+<p>Σε αυτό το παραδοτέο κλιθήκαμε να συνεχίσουμε την εργασία Α από το 3ο
+παραδοτέο. Έχοντας αποκτήσει ακόμη περισσότερες γνώσεις στην χρήση των
+Linux και έπειτα από συνεννόηση με την ομάδα δημιούργησα 2 δικά μου
+slides και 2 timelines σχετικά με τις εικόνες που είχα ήδη επιλέξει.
+Δυστυχώς παρόλες τις προσπάθειες μου ένα από τα δύο timelines που είχαν
+επηλέξει δεν δούλευε κανονικά. Συγκεκριμένα αυτό ήταν το <a
+href="https://panmour.netlify.app//timeline/human-computer-interactions/">timeline</a>.
+Οπότε έπειτα από πολλαπλές και αποτυχημένες προσπάθειες κατάφερα να βρω
+μια λύση (προσωρινά τουλάχιστον, μέχρι να καταφέρω να λύσω εντελώς το
+πρόβλημα) έβγαλα από τα events του md αρχείου μου το xbox (ένα από τα
+δύο αντικείμενα που είχα επιλέξει να προσθέσω στο site) και το timeline
+λειτούργησε κανονικά, απλός δεν εμφανίζει το δικό μου αντικείμενο όποτε
+ανοίγει.</p>
+<h3 id="για-το-xbox">Για το Xbox:</h3>
+<p>=&gt; <a
+href="https://panmour.netlify.app//timeline/human-computer-interactions/">timeline</a></p>
+<p>=&gt; <a
+href="https://panmour.netlify.app//slides/game-machines/">slides</a></p>
+<h3 id="για-το-oxo">Για το OXO:</h3>
+<p>=&gt; <a
+href="https://panmour.netlify.app//timeline/multiplayer/">timeline</a></p>
+<p>=&gt; <a
+href="https://panmour.netlify.app/slides/ai-interaction/">slides</a></p>
+<h3
+id="τα-links-στα-slides-και-στα-timelines-στο-site-μου-στο-github">Τα
+links στα slides και στα timelines στο site μου στο Github:</h3>
+<p>=&gt; <a
+href="https://github.com/PanMour/site/blob/master/_slides/game-machines.md">Game-Machines
+(Xbox Slide)</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/site/blob/master/_timeline/human-computer-interactions.md">Αλληλεπίδραση
+ανθρώπων υπολογιστών (Xbox Timeline)</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/site/blob/master/_slides/AI-interaction.md">AI-Interaction
+(OXO Slide)</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/site/blob/master/_timeline/multiplayer.md">Multiplayer
+(OXO Timeline)</a></p>
+<h2 id="για-τα-νέα-θέματα">Για τα νέα θέματα:</h2>
+<p>Παρομοίως με το 3ο παραδοτέο στο 5ο αποφάσισα να προσθέσω ένα
+επιπλέον timeline και slide για τα δύο νέα θεματά μου και τα πρόσθεσα
+και σε ένα ήδη υπάρχον timeline και slide που αφορούσε την εκπαιδευτική
+τεχνολογία.</p>
+<h3 id="για-το-ibook">Για το Ibook:</h3>
+<p>=&gt; <a
+href="https://panmour.netlify.app//timeline/interactivity-in-learning/">Διαδραστηκότητα
+στην μάθηση</a></p>
+<h3 id="για-το-opensis">Για το OpenSIS:</h3>
+<p>=&gt; <a
+href="https://panmour.netlify.app//slides/information-processing-system/">Συστήματα
+επεξεργασίας πληροφοριών</a></p>
+<h1 id="παραδοτέο-6ο">Παραδοτέο 6ο:</h1>
+<h2 id="κατασκευή-βιβλίου-α">Κατασκευή Βιβλίου Α</h2>
+<p>Σε αυτό το παραδοτέο μας ζητήθηκε να προσθέσουμε μια δικιά μας
+παράγραφο με πληροφοριές στο βιβλίο και έπειτα να βγάλουμε scrennshot
+την προσθήκη που κάναμε από το βιβλίο σε μορφή pdf: - <a
+href="https://github.com/PanMour/info-/blob/main/info.lua">My Lua</a>
+&gt;Χρησιμοποιείται για την προσθήκη των πληροφοριών μου στο βιβλίο.
+&gt;Επεξεργασμένο ώστε να εμφανίζει, με διαφορετικό από το υπόλοιπο
+βιβλίο, τρόπο την παραγραφό μου. &gt;Συγκεκριμένα τοποθετή το κειμένο
+μου λίγο πιο μέσα και το χωρίζει στο τέλος με μια γραμμή ώστε να
+ξεχωρίζει από το επόμενο. - <a
+href="https://github.com/PanMour/info-/blob/main/screenshot.png">Screenshot</a>
+&gt; Το Screenshot με την προσθήκη μου στο βιβλίο. - <a
+href="https://github.com/PanMour/info-/blob/main/book.pdf*">Pdf</a>
+&gt;Το Pdf του βιβλίου που δημιούργησα. &gt;Πολύ συναρπαστική εμπειρία,
+αφού για πρώτη φορά ημούν εγώ που κρατούσα όλη την δύναμη, καθώς με την
+βοήθεια των εργαλίων που μας δώθηκαν κατασκεύασα το βιβλίο σε μορφή pdf,
+κάτι ασυνήθιστο λόγω της ευχρηστίας που επικρατεί. &gt; Περιέχει μέσα
+και την δικιά μου προσθήκη στο βιβλίο. - <a
+href="https://github.com/PanMour/info-/blob/main/Additional-Information.md">md
+file</a> &gt; Το βασικό md αρχείο στο οποίο σημείωσα τα στοιχεία μου για
+να δημιουργηθεί το βιβλίο. # Παραδοτέο 7ο: ## Άσκηση Β1</p>
+<p>Σε αυτό το παραδοτέο δημιούργησα ένα case-study βασισμένο στα θέματα
+που είχα επιλέξει στα προηγούμενα παραδοτέα. Το βασικό θέμα του
+case-study μου είναι το Ibook καθώς λόγω του ενδιαφέροντος μου να
+ασχοληθώ με την εκπαίδευση σε σχολείο στο μέλλον θεώρησα ότι θα με
+βοηθούσε και εμένα προσωπικά να ανακαλύψω τις δυνατότητες που μπορεί να
+μου προσφέρει ένα τέτοιο εργαλίο ενώ ταυτόχρονα θα ήταν και μια
+ενδιαφέρουσα προσθήκη στο ήδη υπάρχον υλικό.</p>
+<h2 id="τα-links-μου">Τα links μου:</h2>
+<h3 id="για-το-netlify">Για το Netlify:</h3>
+<p>=&gt; <a
+href="https://panmour.netlify.app//case-study/ibook-cs/">Ibook
+case-study</a></p>
+<h3 id="για-το-site-μου-στο-github">Για το site μου στο Github:</h3>
+<p>=&gt; <a
+href="https://github.com/PanMour/site/blob/master/_case-study/ibook-cs.md">Ibook
+case-study</a></p>
+<p>=&gt; <a
+href="https://github.com/PanMour/site/blob/master/_includes/cs-ibook.md">case-study
+includes</a></p>
+<h2 id="οι-πηγές-μου-από-τις-οποίες-άντλισσα-τις-πληροφορίες">Οι πηγές
+μου από τις οποίες άντλισσα τις πληροφορίες:</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/IBook">Ibook
+Wikipeida</a></li>
+<li><a href="https://www.computerhope.com/jargon/i/ibook.htm">Ibook
+ComputerHope</a></li>
+<li><a
+href="http://www.differencebetween.net/object/gadgets-object/difference-between-apple-ibook-and-powerbook/">Differences
+between Ibook-Powerbook</a></li>
+<li>[Powerbook vs
+Ibook](https://lowendmac.com/2012/12-powerbook-vs-ibook-is-there-really-a-difference/</li>
+<li><a href="https://apple-history.com/ibook">Apple History of
+Ibook</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenSIS">OpenSIS
+Wikipedia</a></li>
+</ul>
+</body>
+</html>
